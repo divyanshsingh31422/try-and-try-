@@ -1,0 +1,36 @@
+Call by Reference
+C++ allows you to pass arguments by reference, enabling the function to modify the original
+variables.
+Example:
+Output:
+return 0;
+}
+// Function definition
+int add(int a, int b) {
+    return a + b;
+}
+cpp
+#include <iostream>
+using namespace std;
+void swap(int &x, int &y) { // Pass by reference
+    int temp = x;
+    x = y;
+    y = temp;
+}
+int main() {
+    int a = 10, b = 20;
+    cout << "Before Swap: a = " << a << ", b = " << b << endl;
+    swap(a, b);
+    cout << "After Swap: a = " << a << ", b = " << b << endl;
+    return 0;
+}
+less
+44/160
+4. Inline Functions
+Inline functions are small functions that request the compiler to replace the function call with
+the actual code of the function to reduce the overhead of function calls.
+Syntax:
+Example:
+Note: The inline keyword is a request to the compiler, not a command. The compiler may
+ignore it if the function is too complex.
+Before Swap: a = 10, b = 2
